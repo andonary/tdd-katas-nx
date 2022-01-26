@@ -1,0 +1,33 @@
+{
+  "root": "packages/bowling",
+  "sourceRoot": "packages/bowling/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/bowling",
+        "main": "packages/bowling/src/index.ts",
+        "tsConfig": "packages/bowling/tsconfig.lib.json",
+        "assets": ["packages/bowling/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/bowling/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/bowling"],
+      "options": {
+        "jestConfig": "packages/bowling/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
