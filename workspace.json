@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "bowling": "packages/bowling"
+    "bowling": "packages/bowling",
+    "search-city": "packages/search-city"
   }
 }

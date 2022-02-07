@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tddkatas/bowling": ["packages/bowling/src/index.ts"]
+      "@tddkatas/bowling": ["packages/bowling/src/index.ts"],
+      "@tddkatas/search-city": ["packages/search-city/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
