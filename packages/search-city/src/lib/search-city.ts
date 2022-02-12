@@ -1,5 +1,13 @@
-export function searchCity(): any {
-  return undefined;
+export class Search {
+  constructor(private cities: string[]) {}
+
+  execute(input: string): any {
+    if (input === '*') return this.cities;
+    if (input.length < 2) return undefined;
+    return this.cities.filter((city) =>
+      new RegExp(input.toLowerCase()).test(city.toLowerCase())
+    );
+  }
 }
 
 export const cities = [
